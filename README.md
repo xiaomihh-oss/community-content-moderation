@@ -1,190 +1,126 @@
+# Community Content Moderation System
 
+A lightweight rule-based content moderation system built with Python and FastAPI.
 
-\# Community Content Moderation System
+## 1. Project Overview
 
+This project aims to identify potentially risky user-generated content through predefined rules and text pattern matching.
 
+It provides content detection, risk scoring, RESTful API services, and CSV-based batch moderation.
 
-A lightweight content moderation system built with Python and FastAPI.
+## 2. Key Features
 
+- **Keyword Detection:** Identify potential advertisements, spam, and inappropriate language.
+- **Pattern Recognition:** Detect phone numbers and external URLs using regular expressions.
+- **Risk Assessment:** Calculate risk scores and classify content into low, medium, and high-risk levels.
+- **RESTful API:** Provide content moderation services through FastAPI.
+- **Batch Processing:** Support CSV-based batch content moderation and report generation.
+- **Automated Testing:** Validate moderation rules, API endpoints, and batch processing.
 
+## 3. Technology Stack
 
-\## 1. Project Overview
+| Technology | Application |
+|---|---|
+| Python | Core development |
+| FastAPI | Backend API |
+| Uvicorn | API server |
+| Regular Expressions | Text pattern detection |
+| CSV | Batch data processing |
+| unittest | Automated testing |
 
-
-
-This project implements a rule-based content moderation system
-
-for identifying potentially risky user-generated content.
-
-
-
-It supports keyword detection, phone number recognition,
-
-external link detection, risk scoring and batch moderation.
-
-
-
-\## 2. Key Features
-
-
-
-\- Advertisement and spam detection
-
-\- Inappropriate language detection
-
-\- Phone number recognition
-
-\- External URL detection
-
-\- Risk scoring and classification
-
-\- RESTful API with FastAPI
-
-\- CSV batch content moderation
-
-\- Automated testing with unittest
-
-
-
-\## 3. Technology Stack
-
-
-
-\- Python
-
-\- FastAPI
-
-\- Uvicorn
-
-\- Regular Expressions
-
-\- CSV
-
-\- unittest
-
-
-
-\## 4. Project Structure
-
-
+## 4. System Architecture
 
 ```text
-
-community-content-moderation/
-
-├── app/
-
-│   ├── rules.py
-
-│   ├── moderation.py
-
-│   ├── batch\_moderation.py
-
-│   └── main.py
-
-├── tests/
-
-│   ├── test\_moderation.py
-
-│   ├── test\_api.py
-
-│   └── test\_batch\_moderation.py
-
-├── data/
-
-│   └── sample\_comments.csv
-
-├── docs/
-
-├── README.md
-
-├── requirements.txt
-
-└── .gitignore
-
+User Input / CSV Data
+        |
+        v
+Content Moderation Engine
+        |
+        v
+Rule-based Detection
+  - Keyword Detection
+  - Phone Number Detection
+  - URL Detection
+        |
+        v
+Risk Scoring
+        |
+        v
+Risk Classification
+        |
+        v
+Moderation Results
+        |
+        v
+API Response / CSV Report
 ```
 
+## 5. Project Structure
 
+```text
+community-content-moderation/
+├── app/
+│   ├── rules.py
+│   ├── moderation.py
+│   ├── main.py
+│   └── batch_moderation.py
+├── tests/
+│   ├── test_moderation.py
+│   ├── test_api.py
+│   └── test_batch_moderation.py
+├── data/
+│   └── sample_comments.csv
+├── docs/
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
 
-\## 5. Installation
-
-
+## 6. Installation
 
 Install dependencies:
 
-
-
 ```bash
-
 pip install -r requirements.txt
-
 ```
 
-
-
-\## 6. Run the API
-
-
+## 7. Run the API
 
 ```bash
-
 python -m uvicorn app.main:app --reload
-
 ```
 
-
-
-Open the API documentation:
-
-
+API documentation:
 
 http://127.0.0.1:8000/docs
 
-
-
-\## 7. Batch Moderation
-
-
+## 8. Run Batch Moderation
 
 ```bash
-
-python -m app.batch\_moderation
-
+python -m app.batch_moderation
 ```
 
+The system generates a CSV file containing moderation results and a summary report.
 
+## 9. Automated Testing
 
-\## 8. Run Tests
-
-
+Run the test suite:
 
 ```bash
-
 python -m unittest discover -s tests -v
-
 ```
 
+**Current test results: 14 tests passed.**
 
+Test coverage includes:
 
-Current test result: 14 tests passed.
+- Content detection rules
+- API endpoint validation
+- Batch CSV processing
+- Invalid input handling
 
+## 10. Limitations
 
+This project currently uses predefined rules and regular expressions rather than machine learning models.
 
-\## 9. Limitations
-
-
-
-This project uses predefined rules and regular expressions.
-
-It is an educational prototype, not a production-grade
-
-AI moderation system.
-
-
-
-Its rules do not represent the actual moderation policies
-
-of any social media platform.
-
-
-
+It is an educational prototype and does not represent the actual moderation policies or production systems of any social media platform.
