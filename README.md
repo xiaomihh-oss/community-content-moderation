@@ -140,3 +140,17 @@ for detailed test cases and results.
 
 GitHub:
 https://github.com/xiaomihh-oss/community-content-moderation
+## 13. API Testing Screenshots
+
+### Normal Content Moderation
+![Normal Content Test](download1.png)
+
+### Advertising Content Detection
+![Advertising Detection Test](download2.png)
+
+### Phone Number Detection
+![Phone Number Detection Test](download3.png)
+
+## 14. Project Summary
+
+This project demonstrates practical experience in Python backend development, RESTful API implementation, rule-based content detection, batch data processing, and automated software testing.
