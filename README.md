@@ -124,3 +124,19 @@ Test coverage includes:
 This project currently uses predefined rules and regular expressions rather than machine learning models.
 
 It is an educational prototype and does not represent the actual moderation policies or production systems of any social media platform.
+## 11. API Testing Results
+
+API testing was conducted using FastAPI Swagger UI.
+
+Three scenarios were tested:
+- Normal content moderation
+- Advertising content detection
+- Phone number detection
+
+See [API Testing Report](docs/api-test-report.md)
+for detailed test cases and results.
+
+## 12. Project Repository
+
+GitHub:
+https://github.com/xiaomihh-oss/community-content-moderation
